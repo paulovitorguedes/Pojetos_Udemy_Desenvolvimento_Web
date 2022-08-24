@@ -3,45 +3,65 @@ body{
     font: Arial, helvetica, sans-serif;
 }
 
-
-
-.centralizar{ /* Classe centralizar */
-    text-align: center;
-}
-
-h1{
-    color: #828271;
-    font-size: 1.2em;
-}
-
-
 div#contener{
     width: 900px;
 }
 
+
+
+
+h1{
+    color: #828271;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+p{
+    text-align: justify;
+}
+
+
+
+
+
+/* Style menu */
 nav{
     background: #c5c5b2;
     padding: 18px;
     margin-top: -3px;
+    
 }
-
 nav ul{
     list-style: none; /* desaparece com os circulos do menu */
 	text-transform: uppercase; /* transforma em caixa alta */
-    text-align: right;
+    text-align: left;
 }
-
 nav li {
 	display: inline-block; /* fara com o que um bloco seja exibido em uma mesma linha */
     font-weight: bold;
 }
-
 nav a{
     text-decoration: none; /* retira o sublinhado do link */
     color: #4b566a;
 }
 
+/* Style conteudo */
 aside{
     background: #e8e8d9;
     padding: 10px;
+    text-align: center;
+}
+aside img{
+    border: 10px solid #ceceae;
+}
+
+aside.alinha_esquerda{
+    text-align: left;
+}
+
+
+
+/* Style rodapé */
+footer{
+    text-align: center;
 }
