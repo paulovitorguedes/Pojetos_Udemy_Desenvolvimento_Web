@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* ao criar uma div, esse comando
+	faz as bordas ser contabilizada 
+	no tamanho da div que foi solicitado */
+*, 
+*:before, 
+*:after {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ margin: 0px;
+ padding: 0px;
+}
+
+/* obriga a div pai respeitar as configiracoes
+	da div filha*/
+.clearfix:before,
+.clearfix:after {
+ content: " ";
+ display: table;
+}
+.clearfix:after {
+ clear: both;
+}
+.clearfix {
+ *zoom: 1;
+}
+
+body{
+    font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #fff url(../_img/fundo.png) repeat-x top left;
+}
+
+div#container{
+    width: 750px;
+    margin: 0px auto;
+}
+
+
+
+header{
+    height: 150px;
+    background: url(../_img/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+}
+
+header h1.logo{
+    width: 152px;
+    height: 66px;
+    background: url(../_img/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+
+header nav ul{
+    list-style: none;
+    margin-top: 30px;
+    padding: 0px;
+    background: #c4043af3;
+    float: left;
+}
+
+header nav li{
+    float: left;
+}
+
+header nav a{
+    text-decoration: none;
+    display: block;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    background: url(../_img/divisor.png) repeat-y left;
+}
+
+header nav a.primeiro{
+    background: none;
+}
+
+header nav a:hover{
+    color: #69001d;
+}
+
+body#body_home nav a#link_home,
+body#body_brasil nav a#link_brasil{
+    columns: #fff;
+    background: #de003e;
+    cursor: text;
+}
+
+
+
+
+
+
+section#conteudo{
+    margin-top: 70px;
+    float: left;
+}
+
+section.tres_colunas aside#conteudo_primeiro{
+    width: 270px;
+    float: left;
+    margin: 0px 0px 20px 195px; /* 195px esquerda deixando espaço para conteudo lateral onde contem 180px + 15px de espaçamento somando 195px */
+}
+
+section.duas_colunas aside#conteudo_primeiro{
+    width: 555px;
+    float: left;
+    margin: 0px 0px 20px 195px; /* 195px esquerda deixando espaço para conteudo lateral onde contem 180px + 15px de espaçamento somando 195px */
+}
+
+aside#conteudo_segundo{
+    width: 270px;
+    float: left;
+    margin: 0px 0px 20px 15px;
+}
+
+aside#conteudo_lateral{
+    width: 180px;
+    float: left;
+    margin: 0px 0px 20px -750px; /* encosta o conteudo lateral na posição zero do container onde este possui um comprimento de 750px */
+}
+
+aside#conteudo_lateral ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+aside#conteudo_lateral a{
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+aside#conteudo_lateral a:hover{
+    background: #f9f9f9 url(../_img/marcador.png) no-repeat left center;
+    padding-left: 20px;
+    color: #a1a1a1;
+}
+
+aside#conteudo_lateral label{
+    margin-top: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+aside#conteudo_lateral input{
+    font-size: 0.9em;
+    background-color: #fff;
+    padding: 5px;
+    width: 160px;
+}
+
+aside#conteudo_lateral input.submit{
+    background-color: #b10333;
+    color: #fff;
+    width: 80px;
+    border: 2px solid #870529;
+    margin-top: 5px;
+}
+
+aside{
+    background: #f3f3f3 url(../_img/fundo-caixa.png);
+    padding: 5px;
+}
+
+article{
+    background: #fff; 
+    padding: 5px;
+    margin: 5px;  
+}
+
+h2{
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+
+
+
+
+
+footer{
+    clear: both;
+    background: #294c71;
+    width: 100%;
+    min-width: 750px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+
+}
+
+footer div#rodape{
+    margin: 0px auto;
+}
