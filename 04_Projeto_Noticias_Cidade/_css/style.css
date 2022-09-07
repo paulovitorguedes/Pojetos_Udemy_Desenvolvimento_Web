@@ -223,7 +223,7 @@ aside#conteudo_lateral input.submit{
 
 
 
-/*Formatação Conteudo Promeiro (Destaque)*/
+/*Parte Inforior das colunas*/
 ul.lista_noticias li{
     padding: 2px;
     border-bottom: 1px solid #ccc;
@@ -250,6 +250,17 @@ ul.lista_noticias li a{
 }
 
 
+
+
+.coluna_cima a:link, .coluna_baixo a:link,
+.coluna_cima a:visited, .coluna_baixo a:visited{
+    color: #294c71;
+}
+
+.coluna_cima a:hover, .coluna_baixo a:hover,
+.coluna_cima a:active, .coluna_baixo a:active{
+    color: #b10333;
+}
 
 
 

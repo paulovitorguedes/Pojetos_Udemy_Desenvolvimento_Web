@@ -11,3 +11,6 @@ Desenvolvimento Web Completo 2022 - 20 cursos + 20 projetos HTML5, CSS3, SASS, B
 
 * Projeto-03 - Site TecBlog
 ![capa SITE TecBlog](03_Projeto_TecBlog/_interface/tela_1.png)
+
+* Projeto-04 - Site Notícias Cidade
+![capa SITE TecBlog](04_Projeto_Noticias_Cidade/_interface/tela_1.png)
