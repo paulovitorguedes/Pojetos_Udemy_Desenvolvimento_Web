@@ -27,6 +27,8 @@
  *zoom: 1;
 }
 
+
+/* Formatação Container e Geral*/
 body{
     font-size: 1em;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -38,8 +40,18 @@ div#container{
     margin: 0px auto;
 }
 
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*#################*/
 
 
+
+
+/* Formatação TOPO */
 header{
     height: 150px;
     background: url(../_img/detalhe-topo.png) no-repeat right top;
@@ -54,9 +66,7 @@ header h1.logo{
 }
 
 header nav ul{
-    list-style: none;
     margin-top: 30px;
-    padding: 0px;
     background: #c4043af3;
     float: left;
 }
@@ -90,11 +100,11 @@ body#body_brasil nav a#link_brasil{
     cursor: text;
 }
 
+/*################*/
 
 
 
-
-
+/*Formatação Conteudo GERAL*/
 section#conteudo{
     margin-top: 70px;
     float: left;
@@ -106,28 +116,70 @@ section.tres_colunas aside#conteudo_primeiro{
     margin: 0px 0px 20px 195px; /* 195px esquerda deixando espaço para conteudo lateral onde contem 180px + 15px de espaçamento somando 195px */
 }
 
+section.tres_colunas aside#conteudo_segundo{
+    width: 270px;
+    float: left;
+    margin: 0px 0px 20px 15px;
+}
+
 section.duas_colunas aside#conteudo_primeiro{
     width: 555px;
     float: left;
     margin: 0px 0px 20px 195px; /* 195px esquerda deixando espaço para conteudo lateral onde contem 180px + 15px de espaçamento somando 195px */
 }
 
-aside#conteudo_segundo{
-    width: 270px;
-    float: left;
-    margin: 0px 0px 20px 15px;
+
+
+aside{
+    background: #f3f3f3 url(../_img/fundo-caixa.png);
 }
 
+article{
+    background: #fff; 
+    padding: 5px;
+    margin: 5px;  
+}
+
+h2{
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    padding: 3px;
+    background: #b10333;
+    color: #fff;
+    display: inline-block;
+}
+
+h4{
+    font-size: 0.8em;
+    padding: 0px;
+    color: #3e7ab9;
+}
+
+img{
+    border: 2px solid #dfdfdf;
+    width: 100%;
+}
+
+
+/*##########################*/
+
+
+
+
+
+/*Formataão conteudo menu lateral*/
 aside#conteudo_lateral{
     width: 180px;
     float: left;
     margin: 0px 0px 20px -750px; /* encosta o conteudo lateral na posição zero do container onde este possui um comprimento de 750px */
-}
-
-aside#conteudo_lateral ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
 }
 
 aside#conteudo_lateral a{
@@ -167,28 +219,44 @@ aside#conteudo_lateral input.submit{
     margin-top: 5px;
 }
 
-aside{
-    background: #f3f3f3 url(../_img/fundo-caixa.png);
-    padding: 5px;
+
+
+
+
+/*Formatação Conteudo Promeiro (Destaque)*/
+ul.lista_noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 62px;
 }
 
-article{
-    background: #fff; 
-    padding: 5px;
-    margin: 5px;  
+ul.lista_noticias li:hover{
+    background: #eee;
+    cursor: pointer;
 }
 
-h2{
-    font-size: 1em;
-    background: #294c71;
-    color: #fff;
-    padding: 5px;
+ul.lista_noticias li a img{
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+}
+
+ul.lista_noticias li a p{
+    font-size: 0.7em;
+}
+
+ul.lista_noticias li a{
+    text-decoration: none;
 }
 
 
 
 
 
+
+
+
+/*Formatação Rodapé*/
 footer{
     clear: both;
     background: #294c71;
