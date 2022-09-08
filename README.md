@@ -15,5 +15,5 @@ Desenvolvimento Web Completo 2022 - 20 cursos + 20 projetos HTML5, CSS3, SASS, B
 * Projeto-04 - Site Notícias Cidade
 ![Noticias_Cidade](04_Projeto_Noticias_Cidade/_interface/tela_1.jpeg)
 
-* Projeto-04 - Site Notícias Cidade
+* Projeto-05 - Site Chalé Hotel
 ![Chale_Hotel](05_Projeto_Chale_Hotel/_interface/tela_1.jpeg)
