@@ -1,0 +1,32 @@
+
+
+body{
+    background: #f4f2ec url(../_img/fundo.png) repeat-x top;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+div#container{
+    width: 1080px;
+    margin: 0px auto;
+}
+
+
+
+
+
+header {
+	padding: 15px 0;
+	height: 55px;
+}
+
+header #logo h1{
+    float: left;
+}
+
+header #logo a{
+	width: 248px;
+	height: 21px;
+	text-indent:  -9999px;
+	display: block;
+	background: url(../_img/logo.png) no-repeat;
+}
