@@ -1,12 +1,13 @@
 
-
+/*Formatação Body
+-----------------------------------------------*/
 body{
-    background: #f4f2ec url(../_img/fundo.png) repeat-x top;
+    background: #f4f2ec url(../_img/fundo.png) repeat-x;
     font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
 }
 
 div#container{
-    width: 1080px;
+    width: 1080px; /*padrao para sites*/
     margin: 0px auto;
 }
 
@@ -14,6 +15,47 @@ div#container{
 
 
 
+
+
+/*Formatação Gerais
+-------------------------------------------------*/
+ul{
+	list-style: none;
+}
+
+a:link, a:active, a:visited{
+	text-decoration: none;
+	color: #af670a;
+}
+
+a:hover{
+	color: #227115;
+}
+
+h4{
+	color: #86521a;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+	margin-bottom: 0px;
+}
+
+h3{
+	color: #227115;
+	font-size: 1em;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+#principal{
+	float: left;
+	margin-bottom: 20px;
+}
+
+
+
+
+/*Formatação Cabeçalho
+---------------------------------------------------*/
 header {
 	padding: 15px 0;
 	height: 55px;
@@ -23,6 +65,7 @@ header #logo h1{
     float: left;
 }
 
+/*Navegação do Cabeçalho*/
 header #logo a{
 	width: 248px;
 	height: 21px;
@@ -30,3 +73,133 @@ header #logo a{
 	display: block;
 	background: url(../_img/logo.png) no-repeat;
 }
+header nav ul{
+	margin: 20px;
+	float: right;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	display: block;
+	margin-right: 25px;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+}
+header nav ul li a:hover{
+	border-bottom: 1px solid #535858;
+}
+
+
+
+
+
+
+/*Formatação Conteudo
+-------------------------------------------------*/
+
+/* Conteudo Principal*/
+div#conteudo{
+	width: 710px;
+	float: left;
+}
+
+section#postagens article#video{
+	float: left;
+	width: 310px;
+	margin-left: 25px;
+}
+
+section#postagens article#mapa{
+	float: left;
+	width: 310px;
+	margin-left: 37px;
+}
+
+section#postagens article#exposicoes{
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 25px;
+}
+
+section#postagens article#exposicoes ul{
+	list-style-type: disc;
+}
+
+section#postagens article#historia{
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 37px;
+}
+
+
+/* Conteudo lateral*/
+aside{
+	width: 350px;
+	float: right;
+	background: #ebe7dd;
+	padding-bottom: 30px;
+}
+
+aside section#visita{
+	background: #cdc8b1;
+	padding: 10px 27px 27px 27px;
+	margin-top: 10px;
+}
+
+aside section#visita input{
+	height: 20px;
+	width: 80px;
+	background: #ffff;
+	border: none;
+	font-size: 1em;
+}
+
+aside section#visita input.campo{
+	border: 1px solid #ada484;
+}
+
+aside section#visita input.botao{
+	background: #9b9271;
+	color: white;
+	width: 100%;
+	height: 40px;
+	font-size: 1.2em;
+}
+
+aside section#galeria{
+	padding: 0 27px 0 27px;
+}
+
+aside section#galeria a{
+	display: block;
+	background: url(../_img/fundo-foto.png) no-repeat;
+	float: left;
+	padding: 17px 15px 18px 15px;
+	margin: 10px 0 0 20px;
+}
+
+aside section#galeria img{
+	margin-left: 2px;
+	margin-top: 3px;
+}
+
+
+
+
+
+
+/*Formatação Rodape
+-------------------------------------------------*/
+
+footer{
+	clear: both;
+	padding: 20px 0 30px 0;
+	text-align: center;
+	background: url(../_img/fundo-rodape.png) no-repeat center top;
+}
+
+footer>p a{
+	padding: 2px 10px;
+}
+

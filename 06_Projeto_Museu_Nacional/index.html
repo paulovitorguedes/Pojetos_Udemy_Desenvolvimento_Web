@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Paulo Vitor Guedes">
+
     <link rel="stylesheet" href="_css/normalize.css">
     <link rel="stylesheet" href="_css/style.css">
 
@@ -24,6 +25,7 @@
     
     <div id="container">
 
+        <!-- Cabaçalho -->
         <header>
             <div id="logo">
                 <h1>
@@ -43,7 +45,130 @@
 				</ul>
 			</nav><!--Fim nav -->
 
-        </header>
+        </header><!--Fim Cabaçalho -->
+
+
+        
+
+        <!-- Conteudo Principal -->
+        <div id="principal">
+
+            <div id="conteudo">
+
+                <section id="capa">
+                    <img src="_img/museu.png" alt="museu_capa">
+                </section>
+
+                <section id="postagens">
+
+                    <!--Video -->
+                    <article id="video">
+                        <h3>Video: Conheça o Museu Nacional</h3>
+                        <iframe width="310" height="170" src="https://www.youtube.com/embed/RGUYb-hivrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </article>
+
+
+                    <!--Mapa -->
+                    <article id="mapa">
+                        <h3>Mapa: Encontre o Museu Nacional</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206445595985!2d-43.22872294987844!3d-22.905755043518294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu%20Nacional%20-%20UFRJ!5e0!3m2!1spt-BR!2sbr!4v1663631201273!5m2!1spt-BR!2sbr" width="310" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+
+
+                    <!--Exposições -->
+                    <article id="exposicoes">
+                        <h3>Exposições</h3>
+                        <ul>
+                            <li><a href="#">Plantas do Brail Central</a></li>
+                            <li><a href="#">Tereza Cristina: Imperatriz Arquiológica</a></li>
+                            <li><a href="#">Arte com os dinossáuros - Paleoarte</a></li>
+                            <li><a href="#">Plantas do Brail Central</a></li>
+                            <li><a href="#">Tereza Cristina: Imperatriz Arquiológica</a></li>
+                            <li><a href="#">Arte com os dinossáuros - Paleoarte</a></li>
+                            <li><a href="#">Plantas do Brail Central</a></li>
+                            <li><a href="#">Tereza Cristina: Imperatriz Arquiológica</a></li>
+                            <li><a href="#">Arte com os dinossáuros - Paleoarte</a></li>
+
+                        </ul>
+                    </article>
+
+
+                    <article id="historia">
+                        <h3>200 Anos de História</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero quas dolor facere, voluptatum, eum suscipit amet laudantium soluta quos rem inventore iste veritatis cupiditate numquam expedita nostrum iusto? Tempore.</p>
+                        <a href="#">Veja mais...</a>
+                    </article>
+
+
+                </section><!-- Conteudo Postagens -->
+                  
+
+            </div><!--Fim Conteudo -->
+
+
+            
+            <!-- Conteudo lateral -->
+            <aside>
+
+
+                <section id="depoimento">
+                    <img src="_img/depoimento.png" alt="depoimento">
+                </section>
+
+                <section id="visita">
+                    <h4>Faça uma Visita</h4>
+                    <form action="#">
+                        <fieldset>
+                            <legend>Selecione uma data</legend>
+                            <label for="data">Data</label>
+                            <input type="text" id="data" class="campo" value="dd/mm/aaaa">
+
+                            <label for="qtd">Qtd Pessoas</label>
+                            <input type="text" id="qtd" class="campo" value="1" style="width: 30px;">
+                        </fieldset>
+
+                        <input type="submit" value="Verificar Disponibilidade" class="botao">
+                    </form>
+                </section>
+
+                <section id="galeria">
+                    <h4>Galeria de fotos</h4>
+                    <a href="#">
+                        <img src="_img/imagem1.jpg" alt="imagem1" height="93" width="93">
+                    </a>
+
+                    <a href="#">
+                        <img src="_img/imagem2.jpg" alt="imagem2" height="93" width="93">
+                    </a>
+
+                    <a href="#">
+                        <img src="_img/imagem3.jpg" alt="imagem3" height="93" width="93">
+                    </a>
+
+                    <a href="#">
+                        <img src="_img/imagem4.jpg" alt="imagem4" height="93" width="93">
+                    </a>
+                </section>
+
+            </aside> <!--FIM Conteudo Lateral -->
+
+        </div> <!--FIM Conteudo Principal -->
+
+
+        <footer>
+            <p>
+                <a href="#">Home</a>
+                <a href="#">Exposição</a>
+                <a href="#">Pesquisa</a>
+                <a href="#">Acervo</a>
+                <a href="#">Vídeos</a>
+                <a href="#">Fotos</a>
+                <a href="#">Contatos</a>
+            </p>
+            <P>
+                <a href="#">2022 Museu Nacional - Todos os direitos reservados</a>
+            </P>
+        </footer>
 
     </div><!--Fim Container -->
 
