@@ -61,7 +61,55 @@
 
 
 
-        
+
+
+
+        {
+            console.log(`########################## Feature Arrow function`);
+            //quadrado recebe uma função anonima
+            // let quadrado = function (x) {
+            //     return x * x;
+            // }
+
+            //Aqui removemos a palavra function
+            // let quadrado = (x) => {
+            //   return x * x
+            // } 
+
+            let quadrado = x => x * x; //return implícito
+            console.log(quadrado); //retorna a expressão da função 
+            console.log(`Quadrado: ${quadrado(3)} `);//executa a função passando o paremtro 
+
+            //Em caso de mais de um parametro usa ()
+            let soma = (x, y) => x + y; //return implícito
+            console.log(`Soma: ${soma(3, 4)}`);//executa a função passando o paremtro 
+
+
+            // let parOuImpar = function(numero) {
+            //   if(numero % 2 === 0) {
+            //     return 'par'
+            //   } else {
+            //     return 'ímpar'
+            //   }
+            // }
+
+            // let parOuImpar = numero => {
+            //   if(numero % 2 === 0) {
+            //     return 'par'
+            //   } else {
+            //     return 'ímpar'
+            //   }
+            // }
+
+            //variavel recebe o parametro numero (Arrow =>) função 
+            let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar'; //return implícito
+            console.log(parOuImpar(155));
+
+        }
+
+
+
+
 
     </script>
 </head>
