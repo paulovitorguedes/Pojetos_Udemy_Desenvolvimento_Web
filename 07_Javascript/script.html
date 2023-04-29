@@ -250,6 +250,61 @@
 
 
 
+
+
+
+        {
+            console.log(`########################## Objeto Literal`);
+            //Objeos criados com base literal
+
+            //Entenda que os dados recebidos nas variaveis abaixo poderiam ser recebidos pelo documentById de uma pagina html, para exemplo estão sendo adicionados manualmente
+            let nome = 'Paulo';
+            let idade = 41;
+            let cpf = '23456789';
+            let sexo = 'Masculino';
+
+            //const pessoa = {nome:'paulo', idade:41, isMaiorIdade: function(){f}}
+            const pessoa = {
+                nome, //mesmo que nome: nome, 
+                idade,
+                cpf,
+                sexo,
+                isMaiorDeIdade() {
+                    if (this.idade >= 18) {
+                        console.log(`${this.nome} é de maior`);
+                    } else {
+                        console.log(`${this.nome} é de menor`);
+                    }
+                }
+            }
+            //Permite a alteração do valor de um atributo
+            pessoa.nome = 'Caio';
+
+            //Permite a inclusão de um novo atributo 
+            pessoa.proficao = 'Desenvolvedor';
+
+            //Permite a inclusão de uma nova função
+            pessoa.isProfição = () => console.log(`Trabalha como ${pessoa.proficao}`);
+
+
+            console.log(pessoa);
+            pessoa.isMaiorDeIdade();
+            pessoa.isProfição();
+
+            // Todo objeto literal é um objeto único
+            // nesse caso ocorre um alias do objeto e não uma copia dele 
+            // Qualquer alteração no alias, altera o objeto
+            const x = pessoa;
+            x.nome = 'Paulo';
+            console.log(pessoa.nome); //Esse retorno será paulo no qual o valor do atributo foi alterado pelo alias x
+
+        }
+
+
+
+
+
+
     </script>
 </head>
 
