@@ -305,6 +305,63 @@
 
 
 
+
+
+
+        {
+            console.log(`########################## Funções construtoras`);
+            //Objeos criados com base em funções
+            
+            //O this cria uma variável atribuida ao objeto, enquanto o var é uma variável atribuida a função 
+            //Uma var criada dentro de uma função não sofre o hasting, é válida somente dentro da função
+            const pessoa = function () {
+                this.nome = 'Paulo';
+                this.idade = 41;
+                var cpf = '23456789';
+                this.sexo = 'Masculino';
+
+                this.getIdade = function () {
+                    return this.idade;
+                }
+
+                this.setIdade = function (idade) {
+                    this.idade = idade;
+                }
+
+                this.getCpf = function() {
+                    return cpf;
+                }
+
+                this.isMaiorDeIdade = function () {
+                    if (this.getIdade() >= 18) {
+                        console.log(`${this.nome} é de maior`);
+                    } else {
+                        console.log(`${this.nome} é de menor`);
+                    }
+                }
+            }
+
+
+            const pessoa1 = new pessoa();
+            pessoa1.isMaiorDeIdade();
+
+            pessoa1.idade = 10;
+            pessoa1.isMaiorDeIdade();
+
+            //A variável cpf está protegida (Encapsulada), o acesso será possível somente pela função get
+            console.log(pessoa1.cpf); // o retorno será Underfined
+
+            console.log(pessoa1.getCpf());
+
+            console.log(pessoa1);
+
+        }
+
+
+
+
+
+
     </script>
 </head>
 
