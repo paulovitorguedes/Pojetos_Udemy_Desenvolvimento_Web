@@ -196,6 +196,60 @@
 
 
 
+
+        {
+            console.log(`########################## Pilar Abstração Orientado a Objeto`);
+            //paradigma de OO #############################
+            //Objeos criados com base em uma classe
+            class Pessoa {
+                constructor(nome, idade, cpf, sexo) {
+                    this._nome = nome;
+                    this._idade = idade;
+                    this._cpf = cpf;
+                    this._sexo = sexo;
+                }
+
+                set idade(idade) {
+                    this._idade = idade;
+                }
+
+                get idade() {
+                    return this._idade;
+                }
+
+                isMaiorDeIdade() {
+                    if (this._idade >= 18) {
+                        console.log(`${this._nome} é de maior`);
+                    } else {
+                        console.log(`${this._nome} é de menor`);
+                    }
+                }
+            }
+
+            const pessoa1 = new Pessoa('Paulo', 41, '12345678', 'Masculino');
+            const pessoa2 = new Pessoa('Caio', 6, '87654321', 'Masculino');
+
+            // pessoa2._idade = 20;
+            pessoa2.idade = 20;
+
+            pessoa1.isMaiorDeIdade();
+            pessoa2.isMaiorDeIdade();
+
+            //Os atributos não são protegidos, não sendo possível aplicar o Encapsulamento e nesse caso, a partir o objeto é possível buscar e alterar um valor do atributo 
+            console.log(pessoa2._cpf);
+
+            const pessoas = Array();
+            pessoas.push(pessoa1, pessoa2);
+            // console.log(pessoas[0]['nome']);
+            console.log(pessoas);
+
+        }
+
+
+
+
+
+
     </script>
 </head>
 
