@@ -111,6 +111,91 @@
 
 
 
+
+
+
+        {
+            console.log(`########################## Pilar Abstração Procedural Array`);
+
+            //paradigma procedural ################
+            //paradigma procedural, adicionando pessoas de forma verbosa 
+            const pessoas = Array();
+
+            pessoas[0] = Array();
+            pessoas[0]['nome'] = 'Paulo';
+            pessoas[0]['idade'] = 41;
+            pessoas[0]['sexo'] = 'Masculino';
+            pessoas[0]['maior'] = true;
+
+            pessoas[1] = Array();
+            pessoas[1]['nome'] = 'Caio';
+            pessoas[1]['idade'] = 6;
+            pessoas[1]['sexo'] = 'Masculino';
+            pessoas[1]['maior'] = false;
+
+            //paradigma procedural, adicionando pessias de forma de funções 
+            function adicionarPessoa(nome, idade, sexo, maior) {
+                // A const pessoa abaixo, por não conter indices, o JS reconhesse esse Array como Objeto
+                // A função pessoa.length retorna Undefiened
+
+                const pessoa = { nome: nome, idade: idade, sexo: sexo, maior: maior };
+                // const pessoa = Array();
+                // pessoa['nome'] = nome;
+                // pessoa['idade'] = idade;
+                // pessoa['sexo'] = sexo;
+                // pessoa['maior'] = maior;
+
+                //adiciona o objeto pessoa na mtriz de pessoas
+                pessoas.push(pessoa);
+            }
+
+            function isMaiorDeIdade(pessoa) {
+                if (pessoa['maior']) {
+                    console.log(`${pessoa['nome']} é maior de idade`)
+                } else {
+                    console.log(`${pessoa['nome']} é menor de idade`)
+                }
+            }
+            adicionarPessoa('Monique', 40, 'Feminino', true);
+            adicionarPessoa('Nina', 5, 'Feminino', true);
+
+            isMaiorDeIdade(pessoas[1]);
+            console.log(pessoas);
+
+            // possíveis formas de criar um Array
+            const pessoas2 = Array('p1', 'p2', 'p3');
+            console.log(pessoas2);
+            const pessoas3 = ['p1', 'p2', 'p3'];
+            console.log(pessoas3);
+            const pessoas4 = { p1: 'pessoa1', p2: 'pessoa2', p3: 'pessoa3' };
+            console.log(pessoas4);
+
+            //Cria uma String com os valores da matriz separados por ','
+            let teste1 = pessoas2.toString();
+            console.log(teste1);
+
+            //Cria uma String com os valores da matriz separados por '*'
+            teste1 = pessoas2.join('*');
+            console.log(teste1);
+
+            teste1 = pessoas2.splice(1, 2, 't1', 't2');
+            console.log(teste1);
+            console.log(pessoas2);
+
+
+
+
+            //o typeof usado em uma matriz sempre vai retornar "object" 
+            //utilizando a função Array.iaArray() retornsrá true caso o valor for uma matriz
+            console.log(typeof pessoas);
+            console.log(Array.isArray(pessoas));
+
+        }
+
+
+
+
+
     </script>
 </head>
 
