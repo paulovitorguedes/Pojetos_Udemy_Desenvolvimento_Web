@@ -42,6 +42,27 @@
             escopoFuncao();
         }
 
+
+
+
+        {
+            console.log(`########################## Funções - Parâmetros default`);
+
+            //A função pode ser criada entrando com os parametros como default 
+            //Na chamada da função, os parametros que não forem passados, receberão o valor default
+            function contarUmaHistoria(personagem = 'Fubá', atividade = 'Correr no parque', nome_dono = 'João') {
+                console.log(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} e eles viveram felizes para sempre`);
+            }
+            //Os parametros obrigatoriamente precisam ser passados em ordem conforme a função
+            contarUmaHistoria('Repolho', 'Enterrar ossos', 'Pedro');
+            contarUmaHistoria('Repolho', 'Enterrar ossos');
+            //contarUmaHistoria('Repolho', , 'Pedro');
+        }
+
+
+
+        
+
     </script>
 </head>
 
