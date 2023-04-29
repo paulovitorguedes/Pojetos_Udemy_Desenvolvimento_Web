@@ -10,6 +10,37 @@
 
     <script>
 
+        {
+            //O Hasting ocorre apenas dentro de um scopo de bloco 
+            //Somente a variável criada como var sofre o hasting = elevação
+            //3 escopos: global, função e bloco
+
+            //uma cont = constante, não poderá ser alterada. O que foi feito abaixo foi criar uma nova const com o mesmo nome, o que torna possível estando em escopos diferentes.
+            console.log(`########################## (var, let e const) em escopos global, função e bloco  `);
+
+            const plataforma = 'Netflix'; //variavel const global
+            let serie = 'Friends'; //variavel let global
+
+            { // Escopo de bloco genérico
+                // a const e a let criadas no escopo de bloco não sofre o hasting
+                const plataforma = "Amazon";
+                let serie = 'The Walking Dead';
+                console.log(`dentro do bloco:  ${serie} na plataforma: ${plataforma}`);
+            }
+
+            function escopoFuncao() {
+                var serie = 'Wandinha';
+                {
+                    var plataforma = 'Disney'; //A variável sefre hasting para a função e não para a global
+                    //Se esse escopo de bloco estivesse somente dentro da global, neste cado o hasting seria para a global.
+                }
+                console.log(`dentro de função:  ${serie} na plataforma: ${plataforma}`);
+            }
+
+            //A forma de apresentação abaixo é uma template string, usada para concatenação de strings, todo conteúdo fica entre CREASA (BACKTIKS)
+            console.log(`dentro do bloco:  ${serie} na plataforma: ${plataforma}`);
+            escopoFuncao();
+        }
 
     </script>
 </head>
