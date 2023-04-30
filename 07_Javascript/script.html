@@ -362,6 +362,41 @@
 
 
 
+        {
+            console.log(`########################## Design Ptterns Factory`);
+
+            //Design patterns
+            //São chamadas de funçõe com o retorno de objetos literais
+
+            let pessoa = function (nome, idade, cpf, sexo) {
+
+                return {
+                    nome, //mesmo que nome: nome, 
+                    idade,
+                    cpf,
+                    sexo,
+                    isMaiorDeIdade() {
+                        if (this.idade >= 18) {
+                            console.log(`${this.nome} é de maior`);
+                        } else {
+                            console.log(`${this.nome} é de menor`);
+                        }
+                    }
+                }
+            }
+
+            const pessoa1 = pessoa('Paulo', 41, '23456789', 'Masculino');
+            const pessoa2 = pessoa('Caio', 6, '98765432', 'Masculino');
+            pessoa1.isMaiorDeIdade();
+            pessoa2.isMaiorDeIdade();
+
+
+        }
+
+
+
+
+
     </script>
 </head>
 
