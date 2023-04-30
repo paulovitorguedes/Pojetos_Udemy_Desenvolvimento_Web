@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecmascript</title>
 
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
 
+    <!-- <script type="text/babel"> -->
     <script>
 
         {
@@ -389,6 +391,30 @@
             const pessoa2 = pessoa('Caio', 6, '98765432', 'Masculino');
             pessoa1.isMaiorDeIdade();
             pessoa2.isMaiorDeIdade();
+
+
+        }
+
+
+
+
+
+
+        {
+            console.log(`########################## Prorotype_chain`);
+            //cadeia de protótipo, estabelece uma condição de Herança
+            //Todo objeto criado, por padrao é filho de object
+
+
+            Object.prototype.attr50 = 'Z' //cuidado, método global!
+
+            const animal = { attr1: 'a' }
+            const vertebrado = { __proto__: animal, attr2: 'b' }
+            const ave = { __proto__: vertebrado, attr3: 'c', attr2: 'x' }
+
+            //objeto ave possui o prototipo de objeto vertebrado, isso faz ave ser filho de vertebrado e ter acesso aos seus atributos.
+            //Caso objeto ave possuir o mesmo nome de atributo de vertebrado (ex: attr2), ocorre um polimorfismo, sobrescrita
+            console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50);
 
 
         }
