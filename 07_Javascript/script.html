@@ -424,15 +424,41 @@
 
 
         {
-            console.log(`########################## Rest Spread`);
+            console.log(`########################## Rest Spread (...)`);
 
-
+            //Conhecido utilizando ...
+            //No array feira adicionamos o array frutas, juntando os 2 arrays
             const frutas = ['banana', 'uva', 'abacaxi'];
-            const legumes = ['xuxu', 'cenoura', 'batata'];
+            const feira = ['xuxu', 'cenoura', 'batata', ...frutas];
 
-            console.log(frutas.concat(legumes));
-            console.log(frutas.concat(legumes));
+            console.log(...feira);//retorna com string
+            console.log([...feira]); //retorna como Array
+            console.log({...feira}); //retorna como objeto
 
+
+            //O Rest recebe todos os parametros e adicionando em um array 
+            function soma(...param) {
+                let resultado = 0;
+                param.forEach(i => {
+                    resultado += i;
+                });
+
+                //Apresenta a soma dos parametros passados na chamada de função
+                console.log(resultado);
+            }
+            soma(1, 2, 3, 4);
+
+
+            //o rest vai recever os parametros em um Array apartir do segundo parametro
+            function produto(prod, ...param){
+                let resultado = 0;
+                param.forEach(i => {
+                    resultado += i * prod;
+                })
+                console.log(resultado);
+            }
+            //A função multiplica o primeiro parametro passado por cada parametro restante e realiza a soma deles
+            produto(2, 1, 2, 3)
             
         }
 
