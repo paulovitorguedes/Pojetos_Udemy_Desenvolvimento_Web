@@ -433,7 +433,7 @@
 
             console.log(...feira);//retorna com string
             console.log([...feira]); //retorna como Array
-            console.log({...feira}); //retorna como objeto
+            console.log({ ...feira }); //retorna como objeto
 
 
             //O Rest recebe todos os parametros e adicionando em um array 
@@ -450,7 +450,7 @@
 
 
             //o rest vai recever os parametros em um Array apartir do segundo parametro
-            function produto(prod, ...param){
+            function produto(prod, ...param) {
                 let resultado = 0;
                 param.forEach(i => {
                     resultado += i * prod;
@@ -459,7 +459,84 @@
             }
             //A função multiplica o primeiro parametro passado por cada parametro restante e realiza a soma deles
             produto(2, 1, 2, 3)
-            
+
+        }
+
+
+
+
+
+
+
+        {
+            console.log(`########################## Feture Destricturing Assignment`);
+
+            const frutas = ['banana', 'uva', 'abacaxi'];
+            let [fr1, fr2, fr3] = frutas;
+            console.log(fr2);
+
+            //Aqui destruturamos o array frutas onde criamos 3 variavies a, b e c
+            //Cada variável recebe o valor de um indice do Array
+            //apnas entende-se como variável em caso de Array
+            let [a = 'default', b, c] = frutas;
+
+
+            const feira = [['banana', 'uva', 'abacaxi'], ['xuxu', 'cenoura', 'batata']];
+            //buscamos os valores banana no primeiro indice array e batata no terceiro indice array
+            let [[fr], [, , fe]] = feira;
+            console.log(fr, fe);
+
+            const produto = {
+                descricao: 'Notebook',
+                preco: 1800,
+                detalhes: {
+                    fabricante: 'abc',
+                    modelo: 'xyz'
+                }
+            }
+
+            //token
+            //array => []
+            //objeto => {}
+
+            //em caso de objeto como o caso abaixo descrição e preço são os atributos e não variáveis
+            // let { descricao, preco } = produto
+
+            //d e p são alias (variáveis) dos atributos descricao e preco
+            // let {descricao: d, preco: p} = produto
+
+            // let {descricao: d, preco: p, desconto} = produto
+
+            // let {descricao: d, preco: p = 1000, desconto = 5} = produto
+
+            let { detalhes: { fabricante: f, modelo = 'Não informado' } } = produto
+            console.log(f, modelo);
+
+            function detal(produto) {
+                let { detalhes: { fabricante: f, modelo = 'Não informado' } } = produto
+                console.log(f, modelo);
+            }
+            detal(produto);
+
+            function detal2({ detalhes: { fabricante: f, modelo = 'Não informado' } }) {
+                console.log(f, modelo);
+            }
+            detal2(produto);
+
+
+
+            const obj = {
+                a: 10,
+                b: 20,
+                c: 30,
+                d: 40
+            }
+            function teste({ a: x, d, z = 10 }) {
+                console.log(x, d, z)
+            }
+
+            teste(obj)
+
         }
 
 
